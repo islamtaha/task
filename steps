@@ -8,7 +8,9 @@ UPDATE mysql.user SET Password = PASSWORD('password') WHERE User = 'root';
 FLUSH PRIVILEGES;
 CREATE DATABASE testDatabase;
 pip install pillow
-pip install rest_framework
+pip install djangorestframework
+pip install markdown
+pip install django-filter
 pip install googlemaps
 python manage.py makemigrations
 python manage.py migrate
