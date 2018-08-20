@@ -1,0 +1,18 @@
+sudo apt-get update
+sudo apt-get install mysql-server
+sudo ufw allow mysql
+systemctl start mysql
+systemctl enable mysql
+/usr/bin/mysql -u root -p
+UPDATE mysql.user SET Password = PASSWORD('password') WHERE User = 'root';
+FLUSH PRIVILEGES;
+CREATE DATABASE testDatabase;
+pip install pillow
+pip install rest_framework
+pip install googlemaps
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver
+
+(in another terminal)python -m smtpd -n -c DebuggingServer localhost:1025
+
