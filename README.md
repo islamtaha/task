@@ -26,7 +26,9 @@ $ systemctl enable mysql
 
 $ /usr/bin/mysql -u root -p
 > UPDATE mysql.user SET Password = PASSWORD('password') WHERE User = 'root';
+
 > FLUSH PRIVILEGES;
+
 > CREATE DATABASE testDatabase;
 
 7-open another terminal for reset password sending mail debuging and type the following command
