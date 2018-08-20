@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+    // Handler for .ready() called.
+    window.setTimeout(function () {
+        location.href = "http://localhost:8000/account/profile/";
+    }, 2000);
+});
+
+	</script>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+	<h1>Login SuccessFull</h1>
+</div>
+{% endblock %}

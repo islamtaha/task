@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container" >
+<form  method="POST">
+{% csrf_token %}
+                    {{ form.as_p }}
+                        <button type="submit" class="btn btn-danger btn-lg">Calculate</button>
+                  </form>
+                  <br>
+                  {% if dist %}
+                    <p> distance is {{ dist }} in Km</p>
+                  {% endif %}
+                </div>
+{% endblock %}

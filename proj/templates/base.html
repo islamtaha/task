@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	    	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	{% block head %}
+	<title>Assignment</title>
+	{% endblock %}
+
+</head>
+<body>
+	<br>
+	     <div class="container">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Assigment</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  {% if user.is_authenticated %}
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="{% url 'assign:upload' %}">upload File</a>
+    </div>
+     <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="{% url 'assign:distance' %}">distance calculator</a>
+    </div>
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="{% url 'assign:view_profile' %}">Profile</a>
+    </div>
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="{% url 'assign:edit_profile' %}">Edit profile</a>
+    </div>
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="{% url 'assign:change_password' %}">Change Password</a>
+    </div>
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="{% url 'assign:logout' %}">Log out</a>
+    </div>
+    
+  </div>
+  {% else %}
+     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="{% url 'assign:login' %}">Log in</a>
+    </div>
+    
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="{% url 'assign:register' %}">Register</a>
+    </div>
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="{% url 'assign:reset_password' %}">Reset Password</a>
+    </div>
+   
+    
+  </div>
+  {% endif %}
+</nav>
+    </div> <!-- /container -->
+
+
+
+	{% block body %}
+	{% endblock %}
+</body>
+</html>
