@@ -45,3 +45,9 @@ $ python manage.py migrate
 
 $ python manage.py runserver
 
+
+## API
+
+url for api:
+
+http://127.0.0.1:8000/account/api/v1/profiles/
