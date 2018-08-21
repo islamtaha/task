@@ -4,3 +4,4 @@ googlemaps
 djangorestframework
 markdown
 django-filter
+mysql-python
